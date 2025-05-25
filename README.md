@@ -262,6 +262,12 @@
 
 
 ## **DOM**
+	-> How to Access the HTML Element using JavaScriprt
+ 		using : document.getElementById()
+   		Ex : let pElement = document.getElementById("id_name")
+     		     pElement.textContent = "ParaEmenet"
+	    	     pElement.style.color ="blue"
+	   	     pElement.src = "ImgUrl"
 	-> How to Create HTML element using JavaScript
 		Ex :
 		let h1Element = document.createElement("h1");        // 1. Create a new element
