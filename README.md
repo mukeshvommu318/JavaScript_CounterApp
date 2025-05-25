@@ -88,6 +88,75 @@
 		-> Adding the element into array : ( myArray.push(5) )         // [1,"two",3,3.5,5]
 		-> Remove the element from array : ( myArray.pop() )           // [1,"two",3,3.5]
 
+  	-> Object
+   		-> Objects rae collections of Properties (Key & value pairs)
+		-> Creating The Object 
+			let person = {
+		  		name: "Alice",
+		  		age: 30,
+		  		greet: function() {
+		    			console.log("Hello " + this.name);
+		  			}
+				};
+			person.greet();          // Hello Alice
+
+		-> Keys are the identifiers 
+			- It containe alphanumeric, _ , $ ($name, _name, name12, name)
+			- It should not start with number (12name, name 12)
+		-> If I want to  use invalid identifier I can specify that key in the Quotes("")
+			"1" : ......,  "my name" : .......
+		-> Accessing the properties in Object ( . Dot notation, [] Bracket notation )
+			console.log(person.name)    // when the key is valid identifier
+			console.log(person["1"])    // when the key is invalid identifier we can use bracket notation
+			console.log(person["name"])  // bracket notation 
+		
+		-> let person = {name:"Rahul", age:28,}; let a = "name"    
+			console.log(person[a])  // inside the brackets a consider as variable  // o/p Rahul
+			console.log(person.a)   // o/p undefined
+		-> Object Destructuring : Unpacking the properties and assigning the properties to variables
+			let {name} = person;
+				here : name is a variable, it should match with key in the Object
+			let {gender,name} =person;       
+			console.log(gender)   //     undefined
+			console.log(name)     //     Rahul
+		-> Modifying the Object
+			person.name = "Mukesh"
+			person["name"] = "Mukesh"
+		-> Adding the new property to Object
+			person.gender ="male"
+			person['gender']="male"
+		-> Property Values : we can assign the FUnction, array, object as value to the Key
+			class User {
+		  		constructor(name) {
+		    		this.name = name;
+		  		}
+			}
+
+			const person = {
+		  		name: "Alice",                          // string
+		  		age: 25,                                // number
+		  		hobbies: ["reading", "gaming"],         // array
+		  		address: { city: "NY", zip: "10001" },  // object
+		  		greet: function () {                    // function
+		    		     return `Hello, ${this.name}`;
+		  		},
+		  		isActive: true,                         // boolean
+		  		score: null,                            // null
+		  		details: undefined,                     // undefined
+		  		userClass: new User("Alice")            // class instance
+				};
+	
+			console.log(person.name);               // Alice
+			console.log(person.hobbies[0]);         // reading
+			console.log(person.address.city);       // NY
+			console.log(person.greet());            // Hello, Alice
+			console.log(person.userClass.name);     // Alice
+
+		-> document.createElement() 
+			Here : createElement = key 
+			       createElement() = method ( calling createElement function in document Object)
+
+
 
     **Python**
     ->Integer type - 10
@@ -140,6 +209,58 @@
 			my_list.remove(20)
 		3) clear() – Removes all elements
 			my_list.clear()
+
+
+    -> Dictionary 
+    	-> Dictionary rae collections of Properties (Key & value pairs)
+	-> creating Dictionary
+		person = {
+	    		"name": "Alice",
+	    		"age": 30
+			}
+	
+		def greet(p):
+	    		print("Hello", p["name"])
+	
+		greet(person)  			// Hello Alice
+
+	-> Keys can be immutable types( String, tuple, int, Boolean) 
+	-> Accessing the dictionary
+		print(person["name"])    // bracket notation 
+	-> Unpacking in python (destructuring in JS)
+		name, age = person["name"], person["age"]
+	-> modify the dictionary
+		person["age"] = 30 
+	-> add the item/property for dictionary
+		person["city"] = "New York"
+	-> Property Values : we can assign the FUnction, array, object as value to the Key
+		1) Assigning a List
+			my_dict = {
+	    			"fruits": ["apple", "banana", "cherry"]
+			}
+			print(my_dict["fruits"][1])    # Output: banana
+		
+		2) Nested Dictionary
+			my_dict = {
+	    			"person": {
+	        			"name": "Alice",
+	        			"age": 25
+	    				}
+				}
+	
+			print(my_dict["person"]["name"])  # Output: Alice
+	
+		3) Assigning a Function
+			def greet(name):
+	    		     return f"Hello, {name}!"
+	
+			my_dict = {
+	    		     "say_hello": greet
+			}
+	
+			print(my_dict["say_hello"]("Mukesh"))  # Output: Hello, Mukesh!
+
+
 ## **DOM**
 	-> How to Create HTML element using JavaScript
 		Ex :
